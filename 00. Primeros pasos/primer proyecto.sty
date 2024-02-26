@@ -1,0 +1,120 @@
+Cree su primer proyecto HTML/CSS local
+
+Utilice las herramientas de su propia computadora para iniciar su propio proyecto HTML/CSS.
+
+Requisitos:
+
+Editor de texto (recomendamos VS Code)
+Un navegador de Internet
+Introducción
+En este artículo, cubriremos cómo tomar las habilidades de CSS que has aprendido en Codecademy y usarlas para crear una página web básica construida completamente a partir de las herramientas que tienes en tu computadora. Antes de continuar, ya debería estar familiarizado con los conceptos básicos de los editores de texto, los archivos locales y los directorios, todos los cuales se tratan en otras partes de Codecademy.
+
+Le recomendamos que vea este video explicativo y luego siga las instrucciones a continuación.
+
+
+Si desea obtener orientación adicional opcional sobre CSS del mundo real, mire la segunda parte del vídeo.
+
+Paso 1: cree una estructura de carpetas para su página web
+Creemos una estructura de carpetas para respaldar su página web. Una estructura de carpetas bien diseñada le ayudará a navegar rápidamente a los archivos HTML o CSS que contienen su código.
+
+Primero, abra Finder (en Mac) o Explorer (en Windows). A continuación, cree una carpeta (también conocida como directorio) llamada DevProject . Esta carpeta contendrá todos los archivos de su proyecto HTML y CSS.
+
+Abra la carpeta DevProject . En el interior, crea los siguientes elementos:
+
+Un nuevo archivo llamado index.html (use su editor de texto preferido)
+Una nueva carpeta llamada recursos
+El archivo index.html contendrá el código HTML para su página web, mientras que la carpeta de recursos contendrá todos los recursos necesarios que necesitan los archivos HTML (archivos CSS, imágenes, etc.).
+
+A continuación, abra la carpeta de recursos recién creada . Dentro de esta carpeta, cree lo siguiente:
+
+Una carpeta adicional llamada css
+La carpeta css contendrá los archivos CSS necesarios para diseñar su página web.
+
+Finalmente, abra la carpeta css que acaba de crear. Dentro de esta carpeta, cree lo siguiente:
+
+Un nuevo archivo llamado index.css (use su editor de texto preferido)
+El archivo index.css contendrá todas las reglas de estilo CSS que se aplicarán a su página web.
+
+Esta estructura general de carpetas ayudará a respaldar su flujo de trabajo a medida que agrega archivos o recursos. En un nivel alto, así es como debería verse:
+
+sistema de archivos
+
+Paso 2: agregue contenido a su página web
+¡Excelente! Con la estructura de carpetas y los archivos HTML y CSS en el lugar correcto, podemos agregar contenido a la página web.
+
+Primero, abra el archivo index.html en su editor de texto preferido. A continuación, agregue el código HTML estándar requerido:
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+
+
+</body>
+</html>
+
+Después de agregar el código HTML estándar, no dude en agregar también los siguientes elementos:
+
+Tu propio título entre las <title>etiquetas.
+Tu propio contenido dentro de las <body>etiquetas. Si necesita contenido rápido y escrito previamente, no dude en utilizar lo siguiente y modificarlo como desee:
+<h1>FirstName LastName</h1>
+<p>I'm learning to code on Codecademy! My goals include:</p>
+<ul>
+  <li>Learn to code</li>
+  <li>Start a company</li>
+  <li>Help the world</li>
+</ul>
+<p>This is one of my favorite websites: <a href="https://www.google.com/" target="_blank">Google</a></p>
+
+Finalmente, abra el archivo index.css en su editor de texto preferido. Agregue las siguientes reglas CSS preescritas al archivo (siéntase libre de modificarlas como desee):
+
+* {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+
+h1 {
+  color: SeaGreen;
+}
+
+
+p, 
+li {
+  font-size: 18px;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+¡Asegúrese de guardar los cambios para ambos archivos!
+
+Paso 3: vincule su archivo HTML y su archivo CSS
+Resulta que el contenido HTML que agregó no tendrá estilo según las reglas CSS a menos que index.html e index.css estén vinculados. En la <head>sección, vincule la hoja de estilo al archivo HTML.
+
+<link href="./resources/css/index.css" type="text/css" rel="stylesheet">
+
+Quizás se pregunte por qué el hrefatributo está configurado en ./resources/css/index.css. Esto se debe a que debe especificar exactamente dónde se encuentra el archivo index.css dentro de su(s) carpeta(s) en relación con dónde se encuentra index.html (de lo contrario, los dos archivos no se vincularán).
+
+Si tiene problemas para vincular su HTML y CSS, diríjase a los foros de la comunidad de Codecademy para obtener ayuda.
+
+Nuevamente, ¡asegúrese de guardar los cambios!
+
+Paso 4: vea su proyecto
+Gran trabajo: echemos un vistazo a su página web en el navegador.
+
+Abra su navegador web preferido. En la barra de menú, haga clic en "Archivo" y luego haga clic en "Abrir archivo..." (o equivalente). Navegue hasta su archivo index.html y luego haga clic en "Abrir" (o equivalente). El navegador debería cargar su página web. ¿Que ves?
+
+En este punto, siéntete libre de realizar cambios en tu código HTML o CSS. Tenga en cuenta que para ver los cambios nuevos que realice, deberá actualizar su navegador.
+
+Revisar
+¡Felicitaciones! En este corto tiempo, aprendió cómo tomar lo que ha estado aprendiendo en Codecademy y aplicarlo usando las herramientas que tiene disponibles en su computadora personal. Aprendiste exitosamente cómo:
+
+Cree una estructura de carpetas para respaldar tanto su flujo de trabajo como su página web.
+Agregue contenido HTML y estilo CSS a los archivos respectivos
+Vincular los archivos HTML y CSS juntos
+Vea su página web en un navegador (y actualice el navegador para ver nuevos cambios)
+En general, los cuatro puntos anteriores son un buen punto de partida para su propio flujo de trabajo de desarrollador. A medida que aprenda más, podrá modificar el flujo de trabajo para adaptarlo a sus necesidades específicas. En este punto, siéntase libre de modificar el contenido de la página web o crear un proyecto completamente nuevo. ¡Feliz codificación!
