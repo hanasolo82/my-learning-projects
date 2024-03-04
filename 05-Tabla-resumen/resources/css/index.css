@@ -1,0 +1,44 @@
+body {
+    background-color: rgb(2, 3, 74);
+}
+
+h1 {
+    border: solid white;
+    text-align: center;
+    font-family: "Rock 3D", sans-serif, serif;
+    font-size: 60px;
+    color: aliceblue;
+    margin: 30%, 50%x,  red;
+}
+
+th{
+    border: solid rgb(246, 140, 140);
+}
+
+
+td {
+    border: solid rgb(77, 171, 234);
+}
+table {
+    margin: auto;
+    
+      
+}
+
+
+
+.encabezado {
+    
+    font-family: "Madimi One";
+    font-size: 50px;
+    color: aliceblue;
+    text-align: center
+}
+
+
+.cuerpo {
+    font-family: "Madimi One";
+    font-size: 25px;
+    text-align: center;
+    background-color: azure;
+ }

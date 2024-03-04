@@ -1,0 +1,76 @@
+Tipografía
+
+Aoife Conleavy es una novelista que lleva casi dos décadas escribiendo sobre sus viajes. Antes del lanzamiento de su nueva novela Tide Blade , que presenta historias de personajes de la vida real en Marruecos, la autora quiere renovar su sitio web profesional. Modificará la tipografía en su sitio, cambiando el tamaño, el estilo y las familias de fuentes, para que la página sea más fácil de leer.
+
+Utilizando sus conocimientos de tipografía, ayude a Aoife Conleavy a mejorar la legibilidad de su sitio para sus lectores.
+
+Tareas
+0/0 completo _ _
+Marque las tareas como completadas marcándolas
+Marruecos
+1 .
+La headersección del sitio de Aoife Conleavy contiene el nombre del autor, junto con el texto “Viajes”, “Ficción” y “Contacto”.
+
+Cambie el font-weightde headerpara que el texto aparezca en negrita.
+
+
+¿Atascado? Obtén un consejo
+2 .
+Bajando en la página, la bannersección contiene una imagen impresionante, dos bloques de texto, una h2etiqueta con el texto "DEC 20XX" y una h1etiqueta con el texto "Marruecos".
+
+Asigne a la h2etiqueta un peso de fuente de 500 y a la h1etiqueta un peso de fuente de 900.
+
+
+¿Atascado? Obtén un consejo
+3 .
+Después de revisar el proyecto, el autor sugiere que la altura de la línea parece un poco incorrecta y debe modificarse en toda la página.
+
+Trabaje en la página y configure line-heightlos siguientes elementos de la página como se recomienda:
+
+El párrafo dentro de la journalsección debe tener una altura de línea 1.4multiplicada por el tamaño de fuente.
+La primera letra de la sección de la revista debe tener una altura de línea .87multiplicada por el tamaño de fuente.
+La cita debe tener una altura de línea 1.2multiplicada por el tamaño de fuente.
+El contenido del pie de página debe tener una altura de línea 1.5multiplicada por el tamaño de fuente.
+
+¿Atascado? Obtén un consejo
+4 .
+Actualmente, el sitio utiliza fuentes comunes serifque sans-serifse encuentran en las computadoras de los usuarios. Desde que el autor publicó el sitio por primera vez, varias bibliotecas de fuentes nuevas han creado fuentes que cree que se adaptarían mejor al sitio.
+
+Usando la API de Google Fonts , agregue las siguientes fuentes al archivo index.html :
+
+Abril Fatface
+Trabaja Sans en font-weight400, 500 y 800.
+Merriweather en font-weight400 y 400 cursiva
+Puede vincular estas fuentes en una sola <link>etiqueta o en tres <link>etiquetas separadas.
+
+
+¿Atascado? Obtén un consejo
+5 .
+Ahora puede utilizar las fuentes recién agregadas de Google Fonts dentro de nuestro proyecto. Volviendo a bajar la página, configure la font-familypropiedad y como se recomienda:
+
+Establezca el tipo de letra de la h2etiqueta en la bannersección para"Work Sans"
+Establezca el tipo de letra de la h1etiqueta en la bannersección para"Abril Fatface"
+Establezca el tipo de letra de la sección del diario enWork Sans
+Establezca el tipo de letra del pie de foto enMerriweather
+
+¿Atascado? Obtén un consejo
+6 .
+La página se ve muy bien, pero también hay que tener en cuenta a los usuarios que quizás no puedan acceder a Google Fonts. Búsqueles varias fuentes alternativas para usar en caso de que un tercero les restrinja el acceso a fuentes:
+
+Configure las fuentes alternativas de la siguiente manera:
+
+h2etiqueta en la bannersección: "Arial"ysans-serif
+h1etiqueta en la bannersección:sans-serif
+La sección de revista:serif
+El pie de foto:serif
+
+¿Atascado? Obtén un consejo
+7 .
+Al mirar la página, el autor sugiere que la página realmente encajaría si usáramos una fuente específica, CroissantOne-Regular.ttfen el pie de página. Los archivos se descargaron y agregaron a nuestro proyecto dentro del directorio de fuentes dentro del directorio estilos/ donde se almacenan nuestros archivos CSS.
+
+Para completar la tarea, necesita usar la @font-facepropiedad para hacer que estas fuentes sean accesibles en las hojas de estilo. Nombra la fuente "Croissant One".
+
+
+¿Atascado? Obtén un consejo
+8 .
+Ahora que tiene una @font-faceregla, establezca la font-familypropiedad del pie de página en "Croissant One"with "Merriweather"y serifcomo fuentes alternativas.
