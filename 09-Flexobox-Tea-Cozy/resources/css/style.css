@@ -1,0 +1,232 @@
+body {
+    font-family: Helvetica, sans-serif;
+    font-size: 22px;
+    color: seashell;
+    background-color: black;
+    opacity: 0.9;
+       
+}
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container {
+    position: fixed;
+    max-width: 1250px;
+    background-color: black;
+    width: 100%;
+    height: 69px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+.logo {
+  display: inline-flex;
+  height: 50px;
+  
+}
+.link {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    flex-wrap: wrap;
+     
+}
+.link a {
+    position: relative;
+    text-decoration: none;
+    color: seashell;
+    flex-wrap: wrap;
+}
+.link a::after {
+    content:"";
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: seashell;
+    transition: width 0.3s ease-out;
+}
+.link a:hover::after {
+    width: 100%;
+}
+.contenedor-top {
+    
+    max-width: 1200px;
+    width: 100%;
+    margin: 10px auto;  
+}
+.text-mission {
+    background-image: url(../images/img-mission-background.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.text {
+    background-color: black;
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap; 
+    line-height: 0;
+    text-align: center;
+}
+ .text h4 {
+    margin: auto;
+    line-height: 30px;
+}
+
+.contenedor-central {
+    
+    max-width: 1000px;
+    width: 100%;
+    border: 1px solid gold;
+    line-height: 20px;
+    margin: auto;
+}
+.tea{
+    margin-top: 50px;
+}
+.tea h4 , .tea h2 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    line-height: 5px;
+    border:  1px solid purple;
+    margin-bottom: 10px;
+    align-content: center;
+}
+ul.areas {
+    border: 1px solid red;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: start;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin-top: 0;
+    
+    
+    
+}
+li.cubo > div {
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: 1px solid blue;
+    height: 200px;
+    width: 299px;
+    margin: 10px;
+    padding: 0
+}
+
+.areas h4 {
+    display:  inline-flex;
+    border: 1px solid white;
+    width: 300px;
+    flex-direction: row;
+    justify-content: center;
+    
+    margin: 10px;
+    padding: 0;
+
+
+    
+    
+}
+
+.berry { 
+    border: 3px solid violet;
+    background-image: url(../images/img-berryblitz.jpg);
+}
+.rum {
+    background-image: url(../images/img-spiced-rum.jpg);
+}
+.donut{
+    background-image: url(../images/img-donut.jpg);
+}
+.ave {
+    background-image: url(../images/img-myrtle-ave.jpg);
+}
+.bizarre {
+    background-image: url(../images/img-bedford-bizarre.jpg)
+}
+
+.contenedor-footer {
+    background-image: url(../images/img-locations-background.jpg);
+    border: 1px solid gold;
+    min-height: 500px;
+    max-width: 1200px;
+    background-size: cover;
+    margin: auto;
+    text-align: center;
+    
+}
+
+.text-location {
+    display: flex;
+    flex-direction: column;
+   
+    justify-content: center;
+    line-height: 5px;
+    border:  1px solid purple;
+    margin-top: 30px;
+    align-content: center;
+    padding-bottom: 15px;
+}
+ul.recuadros{
+    display: inline-flex;
+    border: 1px solid blue;
+    text-align: center;
+    margin: auto;
+}
+.downtown {
+    display: inline-block;
+    align-content: center;
+    background-color: black;
+    height: 300px;
+    width: 300px;
+    line-height: 40px;
+    opacity: 0.8; 
+    
+}
+.east {
+    display: inline-block;
+    align-content: center;
+    background-color: black;
+    height: 300px;
+    width: 300px;
+    border: 1px solid white;
+    line-height: 40px;
+    opacity: 0.8; 
+
+}
+.oakdale {
+    display: inline-block;
+    align-content: center;
+    background-color: black;
+    height: 300px;
+    width: 300px;
+    line-height: 40px;
+    opacity: 0.8;
+
+}
+.text-foot{
+    border: 1px solid palevioletred;
+    text-align: center;
+    height: 200px;
+}
+
+.copy {
+    margin-left: 20px;
+}
