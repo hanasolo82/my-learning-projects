@@ -1,31 +1,45 @@
 /* Universal Styles */
+/* primero siempre pintar las cuadriculas */
 
-html {
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
+
+body{
+/*display: grid;/* mio */
+max-width: 100%;
+margin: 0 auto;
+
 }
-
 .main-content {
-  position: relative;
+  /*position: relative;*/
   top: 5.3125rem; /* To offset for fixed header. */
+  border: .0625rem solid gold;
+  
 }
 
 .center {
   text-align: center;
+  border: .0625rem solid blue;/*mio*/
+
 }
 
 .button {
   border-radius: 4px;
   background-color: #4a4a4a;
   color: white;
+  border: .0625rem solid red;
 }
 
-.image-container {
+.image-container { /*pertenece a todas img contenedor  */
   overflow: hidden;
+  border: .0625rem solid palevioletred;/*mio*/
+  /*min-height: 30px; /*mio*/
+
 }
 
-.image-container img {
+.image-container img { /*pertenecea todas las imagenes */
   display: block;
+  border: .0625rem solid rgb(128, 126, 0);/*mio*/
+  max-width: 100%;/*mio*/
+  max-height: 100%;/*mio*/
 }
 
 @media only screen and (max-width: 760px) {
@@ -34,47 +48,77 @@ html {
   }
 }
 
-/* Header */
+/* Header ------------------finalizado----------------------------*/
 
 header {
   position: fixed;
   width: 100%;
   border-bottom: solid 1px #c6c1c1;
   background-color: white;
+  border: .0625rem solid black;
+  z-index: 1; /*mio*/
 }
 
 header .content {
   display: flex;
   align-items: center;
-  padding: 1.875rem;
+  
+  /*padding:1.875rem; mio*/
+  border: .0625rem solid black;
+  color: #4a4a4a;
+  font-size: 1.5rem;
+  
+  height: 5.3125rem;/* mio */
 }
 
 header .logo {
   flex: 1;
+  border: .0625rem solid rgb(72, 230, 51);/*mio*/
+  margin-left: 1.875rem;
+  font-family:"Roboto Mono"; /*mio*/
+  font-size: 1.5rem;/*mio*/
 }
 
 header nav ul {
   display: flex;
+  
+  border: .0625rem solid rgb(159, 168, 24);/*mio*/
+  margin-right: 1.875rem;  /*mio 30px logo instagram*/
+  font-family:  "Roboto Mono Regular" ,'Open Sans', 'Helvetica';/*mio*/
+  font-size: 1rem;/*mio*/
+  
 }
 
 nav li {
-  padding-left: 3.5rem;
+  /*display: inline-flex;*/
+  padding-left: 6rem;
+  border: .0625rem solid rgb(170, 22, 138);/* mio*/
 }
 
 nav a {
+  display: flex;
+  
   vertical-align: bottom;
   line-height: 1.6;
   font-size: 1rem;
   color: #4a4a4a;
+  border: .0625rem solid rgb(216, 135, 13);
+
 }
 
-header .icon {
-  width: 1rem;
+header .icon {  /*boton instagram*/
+  width: 1.2rem;/*mio*/
+  height: 1.2rem ;/*mio*/
   padding-left: .75rem;
+  border: .0625rem solid rgb(63, 40, 192);
+  
 }
+/* Header ------------------------finalizado----------------------*/
+/* movil*/
 
 header .mobile {
   display: none;
+  border: .0625rem solid rgb(145, 24, 24);
 }
 
 @media only screen and (max-width: 760px) {
@@ -110,29 +154,49 @@ header .mobile {
   }
 }
 
-/* Sign Up Section */
+/* Sign Up Section --------------------------faltan los tamaños de letra pero son de talles menores -----*/
 
 #sign-up-section {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   height: 43.5rem;
+  padding-top: 10.625rem;/*mio*/
+  padding-left: 6.25rem;/*mio*/
+}
+.banner {
+
+  background-image: url(../images/banner-landingpage.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  border: 3px solid rgb(255, 3, 192);
+  max-width: 100%;
+  height: auto;
+  display: block;
+  
+  
+
 }
 
 #sign-up-cta {
-  padding: 0 5rem 2.5rem 5rem;
+  
+  padding: 0px 5rem 3.5rem 5rem;/*mio pasar a rem*/
   border: solid 1px #979797;
   border-radius: 4px;
   background-color: #9dc20b;
+  border: 1px solid black;
 }
 
 #sign-up-cta .content {
+  
   width: 25.625rem;
-  margin-top: 2rem;
+  margin-top: 32px;
   font-family: "Roboto", sans-serif;
   font-size: 1.25rem;
   line-height: 1.4;
   color: white;
+  border: 1px solid red;/*mio*/
 }
 
 #sign-up-cta h1 {
@@ -144,7 +208,7 @@ header .mobile {
 }
 
 #sign-up-cta span strong {
-  font-weight: bold;
+  font-weight: bold;         /* por aqui los pading top etc............*/
 }
 
 #sign-up-cta .cursive {
@@ -154,13 +218,16 @@ header .mobile {
 #sign-up-cta .striking {
   font-family: "Rubik", sans-serif;
   padding-bottom: .75rem;
+  border: 1px solid yellow;/* mio*/
 }
 
 #sign-up-cta .button {
   margin-top: 1.625rem;
   padding: 1.25rem 7.25rem;
 }
+/*------Sign Up Section------------------------------*/
 
+/*----------transicion------sign up---------------------*/
 @media only screen and (max-width: 760px) {
   #sign-up-section {
     align-items: center;
@@ -206,34 +273,48 @@ header .mobile {
     font-size: 2rem;
   }
 }
+/*----------transicion------sign up---------------------*/
 
-/* Features Section */
+/* Features Section -------------- fotos del medio*/
 
 #features-section {
-  display: flex;
+  display: inline-flex;
   justify-content: space-between;
-  padding: 4rem 5%;
+  padding:/* 4rem 5%;*/;
   background-color: #f3f3f3;
+  height: 40.625rem;/*650px*/
+  border: 1px solid  gold ;/*mio*/
 }
 
 .feature {
+  display: inline-flex;/*mio*/
   flex: 1;
   padding: 2rem;
   margin: 0px 1.25rem;
   background-color: white;
+  border: 1px solid red;/*mio*/
+  height: 39,6875rem;/* mio*/
+  
 }
 
 .feature .image-container {
+  display: inline-flex;/*mio*/
   width: 90%;
   height: 65%;
   margin: 0 auto;
+  border: 1px solid black;
 }
-
+.feature img {
+  max-width: 100%;/*mio*/
+  height: auto;
+  display: block;
+}
 .feature h2 {
   padding-bottom: .5rem;
   font-size: 2.25rem;
   font-weight: bold;
   color: #4a4a4a;
+  border: 1px solid black;
 }
 
 .feature h3 {
@@ -242,7 +323,8 @@ header .mobile {
   font-weight: 300;
   color: #4a4a4a;
 }
-
+/* Features Section -------------- fotos del medio*/
+/* Features Section ----transicion---------- fotos del medio*/
 @media only screen and (max-width: 890px) {
   .feature h2 {
     font-size: 1.125rem;
@@ -267,23 +349,36 @@ header .mobile {
     padding: 1.25rem 1rem 0 1rem;
   }
 }
-
-/* Filters Section */
+/* Features Section ----transicion---------- fotos del medio*/
+/* Filters Section ------------*/
 
 #filters-section {
-  padding: 4rem 0;
+  display: inline-flex;/*mio*/
+  flex-direction: row;/*mio*/
   background-color: #4a4a4a;
+  position: relative;/*mio*/
+  justify-content: center;/*mio*/
+  align-content: space-between;/*mio*/
+  border: 1px solid aqua;
+  padding-top: 64px;
 }
 
 #filters-section .content {
+  display: inline-flex;
+  flex-direction: column;
+  position: absolute;
   padding: 0 .625rem;
-  margin-bottom: 5rem;
+  font-family: "Roboto";
+  margin-top: 0;
+  border: 1px solid green;
 }
 
 #filters-section .content h2 {
+  
   font-size: 2.25rem;
   font-weight: bold;
   color: white;
+  
 }
 
 #filters-section .content h3 {
@@ -291,11 +386,19 @@ header .mobile {
   line-height: 1.4;
   font-weight: 300;
   color: white;
+  
+  
 }
 
 #filters-section .images-container {
+  display: inline-flex;/*mio*/
   max-width: 100%;
   padding: 0 1%;
+  border: 1px solid blue;
+  padding-top: 80px;
+  margin-top: 64px;
+  
+
 }
 
 @media only screen and (max-width: 760px) {
@@ -371,6 +474,8 @@ header .mobile {
 /* Footer */
 
 footer {
+  position: relative;
+  display: inline-flex;
   background-color: #9b9b9b;
   padding: 1.5rem 2rem;
 }
