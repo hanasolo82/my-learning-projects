@@ -1,136 +1,146 @@
 /* Universal Styles */
-/* primero siempre pintar las cuadriculas */
 
-
-body{
-/*display: grid;/* mio */
-max-width: 100%;
-margin: 0 auto;
-
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+ 
 }
+
 .main-content {
-  /*position: relative;*/
+  position: relative;
   top: 5.3125rem; /* To offset for fixed header. */
-  border: .0625rem solid gold;
   
 }
 
 .center {
   text-align: center;
-  border: .0625rem solid blue;/*mio*/
-
+  
 }
 
 .button {
   border-radius: 4px;
   background-color: #4a4a4a;
   color: white;
-  border: .0625rem solid red;
+  
 }
 
-.image-container { /*pertenece a todas img contenedor  */
+.image-container {
+  /*width: 100%; /*-------------ojo cosas raras*/
   overflow: hidden;
-  border: .0625rem solid palevioletred;/*mio*/
-  /*min-height: 30px; /*mio*/
-
+  
 }
 
-.image-container img { /*pertenecea todas las imagenes */
+.image-container img {
+  max-width: 100%;/*--- evitar fotos enormes*/
   display: block;
-  border: .0625rem solid rgb(128, 126, 0);/*mio*/
-  max-width: 100%;/*mio*/
-  max-height: 100%;/*mio*/
+  
 }
 
 @media only screen and (max-width: 760px) {
   .main-content {
     top: 2.5625rem;
+    
   }
 }
 
-/* Header ------------------finalizado----------------------------*/
+/* Header --------------hecho---------------*/
 
 header {
   position: fixed;
   width: 100%;
+  z-index: 100;/*--- aqui mejor que en content----*/
   border-bottom: solid 1px #c6c1c1;
   background-color: white;
-  border: .0625rem solid black;
-  z-index: 1; /*mio*/
+  
 }
 
 header .content {
   display: flex;
   align-items: center;
+  padding: 1.3125rem;/**/
+  font-family: "Roboto Mono";/**/
   
-  /*padding:1.875rem; mio*/
-  border: .0625rem solid black;
-  color: #4a4a4a;
-  font-size: 1.5rem;
-  
-  height: 5.3125rem;/* mio */
 }
 
 header .logo {
   flex: 1;
-  border: .0625rem solid rgb(72, 230, 51);/*mio*/
-  margin-left: 1.875rem;
-  font-family:"Roboto Mono"; /*mio*/
-  font-size: 1.5rem;/*mio*/
+  font-size: 3rem;/**/
+  font-weight: bolder;
+  
+
 }
 
 header nav ul {
   display: flex;
   
-  border: .0625rem solid rgb(159, 168, 24);/*mio*/
-  margin-right: 1.875rem;  /*mio 30px logo instagram*/
-  font-family:  "Roboto Mono Regular" ,'Open Sans', 'Helvetica';/*mio*/
-  font-size: 1rem;/*mio*/
-  
 }
 
 nav li {
-  /*display: inline-flex;*/
-  padding-left: 6rem;
-  border: .0625rem solid rgb(170, 22, 138);/* mio*/
+  padding-right: .5rem;/**/
+  
 }
 
 nav a {
-  display: flex;
-  
-  vertical-align: bottom;
-  line-height: 1.6;
-  font-size: 1rem;
+  display: flex/**/;
+  align-content: baseline;/**/
+  line-height: 3;
+  font-size: .8rem;/**/
+  font-weight: 800;
   color: #4a4a4a;
-  border: .0625rem solid rgb(216, 135, 13);
-
-}
-
-header .icon {  /*boton instagram*/
-  width: 1.2rem;/*mio*/
-  height: 1.2rem ;/*mio*/
-  padding-left: .75rem;
-  border: .0625rem solid rgb(63, 40, 192);
   
 }
-/* Header ------------------------finalizado----------------------*/
-/* movil*/
+
+header .icon {
+  width: 2.5rem;
+  padding-left: .75rem;
+}
 
 header .mobile {
   display: none;
-  border: .0625rem solid rgb(145, 24, 24);
 }
+@media only screen and (max-width: 1024px) {
+ /* header .desktop li:last-child {
+    display: none;
+  }*/
+  nav a {
+    align-content: end;
+    padding-left: 0.1rem;
+  }
+  header .icon {
+    max-width: 1.5rem;/**/
+    max-height: 1.5rem;/**/
+    padding-left: .75rem;/**/
+    
+    margin-top: .5rem;/**/
+  }
+  header .mobile {
+    display: flex; /* Cambiar display a flex para mostrar el menú móvil */
+    justify-content: flex-end; /* Alinea los elementos del menú a la derecha */
+  }
 
-@media only screen and (max-width: 760px) {
+  header .mobile .button {
+    padding: .1875rem .5rem;
+    background-color: #e4a342;;
+    line-height: 1.6;
+    color: white;
+    display: inline-flex;
+  }
+  header .mobile a  {
+    display: none;
+  }
+}  
+@media only screen and (max-width: 768px) {
   header .desktop {
     display: none;
   }
-
   header .mobile {
     display: block;
     width: 100%;
   }
-
+  header .mobile a  {
+    display: block;
+  }
+    
   header .content {
     padding: .5rem 0;
   }
@@ -148,91 +158,89 @@ header .mobile {
 
   header .mobile .button {
     padding: .1875rem .5rem;
-    background-color: #9dc20b;
+    background-color: #e4a342;
     line-height: 1.6;
     color: white;
   }
 }
 
-/* Sign Up Section --------------------------faltan los tamaños de letra pero son de talles menores -----*/
+/* Sign Up Section --------hecho-------*/
 
 #sign-up-section {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   height: 43.5rem;
-  padding-top: 10.625rem;/*mio*/
-  padding-left: 6.25rem;/*mio*/
-}
-.banner {
-
   background-image: url(../images/banner-landingpage.jpg);
-  background-repeat: no-repeat;
+  width: 100%;
   background-size: cover;
-  background-position: top;
-  border: 3px solid rgb(255, 3, 192);
-  max-width: 100%;
-  height: auto;
-  display: block;
+  background-repeat: no-repeat;
+  background-position: bottom;/* de la solucion*/
   
-  
-
 }
 
 #sign-up-cta {
-  
-  padding: 0px 5rem 3.5rem 5rem;/*mio pasar a rem*/
-  border: solid 1px #979797;
-  border-radius: 4px;
-  background-color: #9dc20b;
-  border: 1px solid black;
+  margin-top: 170px;/***/
+  margin-left: 100px;/**/
+  margin-bottom: 170px;/**/
+  padding:0 5rem 2.5rem 5rem;
+  border: solid 3px #979797;
+  border-radius: 10px;
+  background-color: #e4a342;
+  opacity: 0.8;
 }
 
 #sign-up-cta .content {
-  
   width: 25.625rem;
-  margin-top: 32px;
-  font-family: "Roboto", sans-serif;
+  margin-top: 2rem;
   font-size: 1.25rem;
   line-height: 1.4;
   color: white;
-  border: 1px solid red;/*mio*/
 }
 
 #sign-up-cta h1 {
   font-size: 3.125rem;
+  
 }
 
 #sign-up-cta h2 {
   font-size: 2.25rem;
 }
+#sign-up-cta .email {
+  font-family: "Roboto Mono";
+  letter-spacing: -2px;
 
+}
 #sign-up-cta span strong {
-  font-weight: bold;         /* por aqui los pading top etc............*/
+  font-weight: bold;
+  font-style: italic;
 }
 
 #sign-up-cta .cursive {
-  font-family: "Damion", cursive;
+  font-family: "Rubik";
+  font-style: italic;
+  opacity: 1;
 }
 
 #sign-up-cta .striking {
-  font-family: "Rubik", sans-serif;
+  font-family: "Roboto Mono", sans-serif;
   padding-bottom: .75rem;
-  border: 1px solid yellow;/* mio*/
+  
 }
 
 #sign-up-cta .button {
   margin-top: 1.625rem;
-  padding: 1.25rem 7.25rem;
+  opacity: 2;
+  padding: 1.25rem 56px;/**/
+  border: 1px solid black;/**/
 }
-/*------Sign Up Section------------------------------*/
 
-/*----------transicion------sign up---------------------*/
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 1024px) {
   #sign-up-section {
     align-items: center;
     justify-content: center;
-    height: 28rem;
+    height:  28rem;
+    
   }
 
   #sign-up-cta {
@@ -241,6 +249,10 @@ header .mobile {
     height: auto;
     background-color: transparent;
     border: none;
+    padding: 0;
+    opacity: 1;
+    margin-right: 20%;/*--------------------lo arregla un poco */
+    
   }
 
   #sign-up-cta .content {
@@ -273,72 +285,74 @@ header .mobile {
     font-size: 2rem;
   }
 }
-/*----------transicion------sign up---------------------*/
 
-/* Features Section -------------- fotos del medio*/
+/* Features Section ------------empezamos hecho--*/
 
 #features-section {
-  display: inline-flex;
+  display: flex;
   justify-content: space-between;
-  padding:/* 4rem 5%;*/;
+  padding: 4rem 5%;
   background-color: #f3f3f3;
-  height: 40.625rem;/*650px*/
-  border: 1px solid  gold ;/*mio*/
 }
 
 .feature {
-  display: inline-flex;/*mio*/
   flex: 1;
   padding: 2rem;
-  margin: 0px 1.25rem;
-  background-color: white;
-  border: 1px solid red;/*mio*/
-  height: 39,6875rem;/* mio*/
-  
+  margin: 0px 2.87rem;
+  background-color: rgb(255, 255, 255);
 }
 
 .feature .image-container {
-  display: inline-flex;/*mio*/
   width: 90%;
   height: 65%;
   margin: 0 auto;
-  border: 1px solid black;
 }
-.feature img {
-  max-width: 100%;/*mio*/
-  height: auto;
-  display: block;
-}
+
 .feature h2 {
   padding-bottom: .5rem;
+  font-family: "Roboto";
   font-size: 2.25rem;
   font-weight: bold;
   color: #4a4a4a;
-  border: 1px solid black;
+  width: 90%;
+  padding-top: 2.5rem;
+  margin: 0 auto;
 }
 
 .feature h3 {
+  font-family: "Roboto";
   font-size: 1rem;
   line-height: 1.2;
-  font-weight: 300;
-  color: #4a4a4a;
+  font-weight: 800;
+  color: #686868;
+  width: 90%;
+  margin: 0 auto 1.5rem auto;
+  
+  
 }
-/* Features Section -------------- fotos del medio*/
-/* Features Section ----transicion---------- fotos del medio*/
-@media only screen and (max-width: 890px) {
+
+@media only screen and (max-width: 1024px) {
+
   .feature h2 {
-    font-size: 1.125rem;
-    line-height: 1.3;
-    font-weight: normal;
+    text-align: start;
+    font-family: "Roboto";
+    font-size: 1.525rem;
+    line-height: 1.2;
+    font-weight: bold ;
+    padding-top: 1rem;
   }
+  
 
   .feature h3 {
+    font-family: "Roboto";
     font-size: .875rem;
     line-height: 1.4;
+    text-align: start;
+    margin: 0 auto;
   }
 }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 900px) {
   #features-section {
     flex-flow: column;
     padding: 0;
@@ -346,73 +360,98 @@ header .mobile {
 
   .feature {
     margin: 0;
-    padding: 1.25rem 1rem 0 1rem;
+    padding: 2.5rem 1rem 0 1rem;
+  }
+  .feature:nth-child(1) {
+    background-color: #c8c8c8;
+  }
+  .feature h2 {
+    text-align: center;
+    font-family: "Roboto";
+    font-size: 2.5rem;
+    line-height: 1.2;
+    font-weight: bold ;
+    padding-top: 1rem;
+  }
+  
+
+  .feature h3 {
+    text-align: center;
+    font-family: "Roboto";
+    font-size: 1.4rem;
+    line-height: 1.4;
+    padding-bottom: 2rem;
+    
+    margin: 0 auto;
   }
 }
-/* Features Section ----transicion---------- fotos del medio*/
-/* Filters Section ------------*/
+@media only screen and (max-width: 500px) {
+  .feature h2 {
+    
+    font-size: 1.4rem;
+
+  }
+
+  .feature h3 {
+    padding-top: 0.5rem;
+    font-size: 0.99rem;
+  }
+}  
+/* Filters Section ----hecho----*/
 
 #filters-section {
-  display: inline-flex;/*mio*/
-  flex-direction: row;/*mio*/
+  padding: 4rem 0;
   background-color: #4a4a4a;
-  position: relative;/*mio*/
-  justify-content: center;/*mio*/
-  align-content: space-between;/*mio*/
-  border: 1px solid aqua;
-  padding-top: 64px;
 }
 
 #filters-section .content {
-  display: inline-flex;
-  flex-direction: column;
-  position: absolute;
-  padding: 0 .625rem;
   font-family: "Roboto";
-  margin-top: 0;
-  border: 1px solid green;
+  margin-left: 0;
+  margin-bottom: 3rem;
 }
 
 #filters-section .content h2 {
-  
+  display: flex;
+  flex-flow: column;
   font-size: 2.25rem;
   font-weight: bold;
   color: white;
+  margin-bottom: 1rem;
+  padding: 0.8rem auto;
+  
   
 }
 
 #filters-section .content h3 {
+  display: flex;
+  flex-flow: column;
   font-size: 1rem;
   line-height: 1.4;
   font-weight: 300;
   color: white;
-  
+  margin-bottom: 5,3125rem;
   
 }
 
 #filters-section .images-container {
-  display: inline-flex;/*mio*/
+  display: flex;
   max-width: 100%;
-  padding: 0 1%;
-  border: 1px solid blue;
-  padding-top: 80px;
-  margin-top: 64px;
-  
-
+  padding: 0 1% 3rem 1%;
 }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 1024px) {
   #filters-section {
     padding: 1.5rem 0 0 0;
   }
 
   #filters-section .content {
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
   }
 
   #filters-section .content h2 {
     padding-bottom: .625rem;
     font-size: 1.125rem;
+    font-size: 2.25rem;
     line-height: 1.3;
     font-weight: normal;
   }
@@ -420,6 +459,9 @@ header .mobile {
   #filters-section .content h3 {
     font-size: .875rem;
     line-height: 1.4;
+    
+    margin: 0 2.5rem;
+    
   }
 
   #filters-section .images-container {
@@ -431,67 +473,93 @@ header .mobile {
   }
 }
 
-/* Quotes Section */
-
+ /* Quotes Section ---------empezamos---- */
 #quotes-section {
   background-color: #f3f3f3;
+  width: 100%;
+  
+}
+#quotes-section .content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding:  5rem 1.5rem;/
+  width: 100%;
 }
 
-#quotes-section content {
-  padding: 5rem 0;
-}
-
-#quotes-section quote {
+#quotes-section .quote {
   padding-right: 1.875rem;
-  font-family: "Palatino", serif;
-  font-size: 1.875rem;
+  font-family: "Dancing Script", serif;
+  font-size: 2rem;
   line-height: 1.1;
   font-style: italic;
   color: #4a4a4a;
+  
 }
 
-#quotes-section quote-citation {
+#quotes-section .quote-citation {
   height: 1.875rem;
+  
 }
 
 @media only screen and (max-width: 760px) {
-  #quotes-section content {
+  #quotes-section .content {
     padding: 1.875rem .625rem;
   }
 
-  #quotes-section quote {
+  #quotes-section .quote {
     font-size: 1.5rem;
     line-height: 1.4;
   }
 
-  #quotes-section quote-citation {
+  #quotes-section .quote-citation {
     display: block;
     padding-top: 1rem;
     margin: auto;
   }
 }
 
-/* Footer */
+/* Footer Section --------hecho-------------*/
 
 footer {
-  position: relative;
-  display: inline-flex;
+  display: flex;
+  flex-wrap: wrap;
   background-color: #9b9b9b;
-  padding: 1.5rem 2rem;
+  /*padding: 1.5rem 2rem;*/
+  width: 100%;
+  height: 4.25rem;
+  border: 1px solid rgb(177, 77, 77);
+  
 }
 
 footer .content {
-  color: white;
   display: flex;
-  font-size: .75rem;
+  align-items: baseline;
+  padding-right: 2rem;
+  font-family: "Roboto Mono";
+  font-size: 1rem;
+  color: white;
+  
 }
 
 footer .copyright {
+  display: flex;
+  padding-top: 1.60rem;
+  padding-left: 2rem;
   flex-grow: 1;
+  
 }
 
-@media only screen and (min-width: 760px) {
+@media only screen and (max-width: 750px) {
   footer .content {
-    font-size: .625rem;
+    font-size: .8rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  footer .content {
+    font-size: .7rem;
+    letter-spacing: -1px;
+    word-spacing: -1px;
+    
   }
 }
