@@ -1,0 +1,87 @@
+
+body {
+    position: relative;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.grid {
+    display: grid;
+    grid-template: "header header header header" 100px
+                    "nav   nav    nav    nav"     50px
+                   "aside1  main   main   aside2"  50rem 
+                   "aside1  main   main   aside2"  1fr
+                   "footer footer footer footer" 100px
+                    / 1fr   2fr    2fr    1fr;
+
+
+}
+header {
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    grid-area: header;
+    background-color: #7777;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+nav {
+    grid-area: nav;
+    background-color: #91b1d2;
+    padding: 10px;
+}
+main {
+    grid-area: main;
+    background-color: #79c78a;
+    padding: 10px;
+}  
+.aside1 {
+    grid-area: aside1;
+    background-color: #f7c5a8;
+    padding: 10px;
+}
+.aside2 {
+    grid-area: aside2;
+    background-color: #dad2ce;
+    padding: 10px;
+}
+footer {
+    grid-area: footer;
+    background-color: #deb4dd;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+@media only screen and (max-width: 1024px){
+   .grid {
+    display: grid;
+    grid-template: "header header header header" 100px
+                    "nav   nav    nav    nav"     50px
+                   "aside1  main   main   main"  30rem 
+                   "aside1  main   main   main"  1fr
+                   "footer footer footer footer" 100px
+                    / 1fr   2fr    2fr    1fr;
+    }
+
+    .aside2 {
+        display: none;
+    }
+}
+@media only screen and (max-width: 768px){
+    .grid {
+        display: grid;
+        grid-template: "header header header header" 100px
+                        "nav   nav    nav    nav"     50px
+                       "main   main   main   main"    20rem 
+                       "aside1 aside1 aside1 aside1"  20rem 
+                       "aside2 aside2 aside2 aside2"  20rem 
+                       "footer footer footer footer" 100px
+                        / 1fr   2fr    2fr    1fr;
+    }
+    .aside2 {
+        display: block;
+    }
+   
+  
+}
