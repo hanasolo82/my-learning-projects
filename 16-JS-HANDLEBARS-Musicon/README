@@ -1,0 +1,10 @@
+#Música encendida --proyecto final 
+---------------
+En este proyecto, actualizarás el sitio web de una tienda de instrumentos musicales en línea, Musicon. Incorporarás tus conocimientos de HTML, CSS, JavaScript y Handlebars para crear un sitio web interactivo de varias páginas con estilo.
+
+Musicon tendrá tres páginas web independientes: una página de inicio, una página de tienda y una página de contactos. Las páginas de inicio y de tienda ya tienen la mayor parte del código HTML y CSS configurados. Tu trabajo consiste en realizar los siguientes cambios:
+
+Cree una barra de navegación utilizando listas desordenadas, etiquetas de anclaje y atributos de clase.
+Diseñe el sitio web utilizando sus conocimientos sobre visualización, posicionamiento, color y declaraciones de fuentes.
+Cree plantillas semánticas utilizando un motor de plantillas del lado del cliente: Handlebars .
+Muestra información relevante utilizando objetos de JavaScript, matrices y flujo de control junto con los ayudantes de iteración y flujo de control de Handlebars integrados.
