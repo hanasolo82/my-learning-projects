@@ -1,6 +1,6 @@
 /* General Rulesets */
 * {
-    color: #ffffff;
+   /* color: #ffffff;*/
   }
   
   body {
@@ -26,7 +26,8 @@
   }
   
   .container {
-  
+   width: 90%;
+   margin: auto;
   }
   
   .branding {
@@ -62,7 +63,9 @@
   /* Home Page Rulesets */
   
   #introduction {
-  
+    text-align: center;
+    margin-top: 15%;
+    margin-bottom: 50%;
   }
   
   #introduction h1 {
@@ -98,7 +101,11 @@
   
   .instrument {
     width: 90%;
+    padding: 2% 5%;
+    margin: 5% auto;
     overflow: auto;
+    border-radius: 5%;
+    background-color: rgba(255, 254, 254, 0.9);
   
   }
   
@@ -116,10 +123,11 @@
     width: 60%;
     margin: -1% auto;
     padding: 2%;
+    
   }
   
   .name, .description, .price, del {
-    color: #000000;
+    color: #030303;
     text-align: left;
   }
   
@@ -162,13 +170,13 @@
   }
   
   #top h2 {
-    margin: 3%
+    margin: 3%;
     font-size: 30px;
     font-weight: normal;
   }
   
   #top p {
-    margin: 3%
+    margin: 3%;
     font-size: 18px;
     font-weight: lighter;
   }
