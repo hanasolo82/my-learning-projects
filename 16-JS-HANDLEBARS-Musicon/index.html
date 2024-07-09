@@ -3,10 +3,17 @@
 
 <head>
   <meta charset="UTF-8">
+  <title>Musicon</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="public/style.css"/>
-  <title>Musicon</title>
+  <!--muy importante de momento este es script que conozco para este entorno-->
+  <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.min.js"></script>
+  <script id="templateHB" type="text/x-handlebars-template">
+    <h1>{{title}}</h1>
+    <p>{{body}}</p>
+    <a href="store.html">Shop Now</a>
+  </script>
 </head>
 
 <body>
@@ -26,13 +33,8 @@
   </header>
 
   <article id="introduction">
-    <section class="container">
-      <h1>Welcome to Musicon</h1>
-      <p>Musicon is a budding musical storefront with a mission to share the joy of music. These magnificent auditory
-        tools are designed with musical creators, like you, in mind. Hobbyists, beginners, and experts alike can
-        appreciate the resplendent sounds supplied by each and every instrument we carry. Join us in delivering the
-        euphoric vibrations of melodia to the citizens of the world!</p>
-      <a href="store.html">Shop Now</a>
+    <section class="container" id="information">
+     
     </section>
   </article>
 
